@@ -1,0 +1,20 @@
+[package]
+name = "rust-auth-server"
+version = "0.1.0"
+edition = "2021"
+authors = ["Romando Purba <romando.purba@yahoo.com>"]
+description = "A Rust-based authentication server with MFA support"
+
+[dependencies]
+dotenv = "0.15.0"
+env_logger = "0.11.5"
+serde = { version = "1.0.210", features = ["derive"] }
+sqlx = { version = "0.8.2", features = ["postgres", "macros", "runtime-async-std-native-tls", "uuid", "chrono"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+uuid = { version = "1.3", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+actix-web = "4.9.0"
+async-trait = "0.1.82"
+argon2 = "0.5.3"
+thiserror = "1.0.63"
